@@ -1,10 +1,17 @@
-﻿namespace apbd_test1.Model;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace apbd_test1.Model;
 
 public class NewVisitDTO
 {
+    [Required]
     public int VisitId { get; set; }
+    [Required]
     public int ClientId { get; set; }
+    [Required]
+    [MaxLength(14)]
     public string MechanicLicenceNumber { get; set; }
+    [Required]
     public List<NewVisitServiceDTO> Services { get; set; }
 }
 
